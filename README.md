@@ -41,6 +41,8 @@ Ratio: 27.5 ÷ 89.9 = 0.306
 
 Since 0.306 is way below 0.8, your project's model fails the four-fifths rule — meaning if this were a real lending company, this pattern alone would be enough for a regulator to investigate them for discrimination, even though nobody at the company intentionally told the AI to treat men and women differently
 
+<img width="1232" height="577" alt="screenshott" src="https://github.com/user-attachments/assets/e2a9b608-c07d-4415-842c-0948fb1dfb65" />
+
 ## Files
 
 - `loan_fairness_report.py` — the entire pipeline: data generation, SQL, model training, fairness audit, HTML report generation

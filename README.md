@@ -48,6 +48,9 @@ Since 0.306 is way below 0.8, your project's model fails the four-fifths rule â€
 - `fairness_report.html` â€” a sample generated report (open directly in your browser)
 - `requirements.txt`
 
+  ##**Live Demo**
+  https://inderj166.github.io/loan-fairness-ai-audit/
+
 ## How to run it
 
 ```bash

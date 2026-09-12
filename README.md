@@ -18,6 +18,29 @@ The model never uses gender as an input, but it still fails the fairness check: 
 
 **The lesson:** excluding a protected attribute from a model's features does not, by itself, make the model fair.
 
+##**Findings**
+The EEOC stands for the Equal Employment Opportunity Commission — a real US government agency that enforces anti-discrimination laws in hiring, lending, and other decisions that affect people's opportunities.
+
+The "four-fifths rule" (also called the 80% rule) is a simple test they use to spot possible discrimination:
+
+The rule in plain terms:
+
+If one group is selected (hired, approved, accepted) at less than 80% the rate of another group, that's a red flag for discrimination.
+
+How to calculate it:
+
+(lower group's approval rate) ÷ (higher group's approval rate)
+
+If that number is below 0.8 (80%), you've failed the rule.
+
+In our project's case, from that screenshot:
+
+Male approval rate: 89.9%
+Female approval rate: 27.5%
+Ratio: 27.5 ÷ 89.9 = 0.306
+
+Since 0.306 is way below 0.8, your project's model fails the four-fifths rule — meaning if this were a real lending company, this pattern alone would be enough for a regulator to investigate them for discrimination, even though nobody at the company intentionally told the AI to treat men and women differently
+
 ## Files
 
 - `loan_fairness_report.py` — the entire pipeline: data generation, SQL, model training, fairness audit, HTML report generation
@@ -32,7 +55,7 @@ pip install -r requirements.txt
 python loan_fairness_report.py
 ```
 
-Then open `fairness_report.html` in any browser. That's it — no other setup.
+Then open `fairness_report.html` in any browser. That's it.
 
 ## Why this is worth knowing (for interviews)
 
